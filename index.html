@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Classifier</title>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/curious-rookiee/sentiment-classifier/main/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Classifier</h1>
+        <h3>Select a review to classify its sentiment:</h3>
+        <ul class="reviews-list">
+            {% for review in reviews %}
+            <li class="review-item">
+                <form action="/classify" method="POST">
+                    <input type="hidden" name="sentence" value="{{ review }}">
+                    <button type="submit" class="review-button">{{ review }}</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
