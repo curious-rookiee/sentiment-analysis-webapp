@@ -1,5 +1,5 @@
 // Load TensorFlow.js
-const modelPath = "https://raw.githubusercontent.com/curious-rookiee/sentiment-analysis-webapp/main/sentiment_analysis_model.h5";
+const modelPath = "https://raw.githubusercontent.com/curious-rookiee/sentiment-analysis-webapp/main/sentiment_analysis_model.pkl";
 let model;
 
 // Load the model
